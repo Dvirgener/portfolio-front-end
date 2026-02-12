@@ -1,0 +1,66 @@
+/* Container for shapes */
+.floating-shapes {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Base shape */
+.floating-shapes .shape {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: floatY var(--dur, 6s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+
+  /* fuchsia glow color driven by --hue */
+  background: radial-gradient(
+    circle at 30% 30%,
+    hsl(var(--hue, 300) 95% 70% / 0.95),
+    hsl(var(--hue, 300) 95% 55% / 0.35) 55%,
+    transparent 70%
+  );
+
+  box-shadow:
+    0 0 40px hsl(var(--hue, 300) 95% 60% / 0.35),
+    0 0 80px hsl(var(--hue, 300) 95% 60% / 0.20);
+
+  mix-blend-mode: screen; /* looks great on dark backgrounds */
+}
+
+/* Variants */
+.floating-shapes .circle {
+  border-radius: 9999px;
+}
+
+.floating-shapes .square {
+  border-radius: 18px;
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.floating-shapes .blob {
+  border-radius: 55% 45% 60% 40% / 55% 45% 55% 45%;
+}
+
+/* Animation: up-down + tiny scale breathing */
+@keyframes floatY {
+  0% {
+    transform: translate(-50%, -50%) translateY(calc(var(--drift, 24px) * -1))
+      scale(0.96);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(var(--drift, 24px)) scale(1.04);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(calc(var(--drift, 24px) * -1))
+      scale(0.96);
+  }
+}
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .floating-shapes .shape {
+    animation: none;
+  }
+}

@@ -1,8 +1,9 @@
+import HeroSection from './sections/Hero'
+
 export default function HomePage(){
     return(
-        <>
-        This is my Homepage
-        
-        </>
+        <div className='h-full'>
+            <HeroSection/>
+        </div>
     )
 }
