@@ -35,7 +35,7 @@ export default function MainNavigation (){
                 menuVisible &&
 
             <div className="h-90 w-full absolute top-20 md:hidden px-5 flex justify-center pt-5">
-                <div className="h-max w-full rounded-md px-10 py-5 bg-fuchsia-300/40 backdrop-blur text-white">
+                <div className="h-max w-full rounded px-10 py-5 bg-fuchsia-300/20 backdrop-blur text-white">
                     <VirgMiniNav/>
                 </div>
             </div>

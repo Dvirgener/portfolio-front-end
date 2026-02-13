@@ -10,7 +10,7 @@ function App() {
 
   return (
 
-    <div className='w-full relative h-full border overflow-auto'>
+    <div className='w-full relative h-full'>
                                   
       <MainNavigation/>
       <div>

@@ -4,7 +4,7 @@ import { CodeXml, Database, Layers, PenTool } from "lucide-react";
 
 export default function AboutMe(){
     return(
-        <div className="px-10 md:px-20 mb-55">
+        <div className="px-10 md:px-20">
             <div className="mb-15">
                 <p className="special-elite-regular text-3xl md:text-6xl grenze-regular text-center mb-3"><span className="text-white">About</span> Me</p>
                 <p className="text-center text-white roboto-virg">A PHP Laravel Developer dedicated to building dynamic and exceptional digital experience.</p>
