@@ -16,7 +16,7 @@ import VirgLinkedIn from "@/components/icons/virgLinkedIn"
 export default function HeroSection(){
 
     return(
-        <div className="flex flex-col items-center justify-center space-y-5 relative py-15">
+        <div className="flex flex-col items-center justify-center space-y-5 relative py-25">
             {/* Left */}
             <FloatingShape x={20} y={10} />
             <FloatingShape x={5} y={85} />
