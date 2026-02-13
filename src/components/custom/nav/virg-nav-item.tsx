@@ -15,7 +15,7 @@ export default function VirgNavItem(
     return (
         <div >
             <NavLink to={linkTo}  className={({ isActive, isPending }) =>
-                `flex gap-2 px-5 rounded-md py-2 text-white text-xs hover:bg-fuchsia-200/50 ${
+                `flex gap-2 px-5 rounded-md py-2 text-white text-sm hover:bg-fuchsia-200/50 items-center ${
                 isPending
                     ? "opacity-50"
                     : isActive

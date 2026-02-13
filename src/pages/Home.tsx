@@ -2,8 +2,16 @@ import HeroSection from './sections/Hero'
 
 export default function HomePage(){
     return(
-        <div className='h-full'>
+        <>
+                <section className='h-full' id="hero-section">
             <HeroSection/>
-        </div>
+        </section>
+        <section>
+            <div className='h-200'>
+
+            </div>
+        </section>
+        </>
+
     )
 }

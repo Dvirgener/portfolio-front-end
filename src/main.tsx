@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, useContext } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
@@ -7,6 +7,8 @@ import { RouterProvider } from 'react-router'
 import { ThemeProvider } from "@/components/theme-provider"
 import HomePage from './pages/Home.tsx'
 import App from './App.tsx'
+import { NavigationContext } from './store/context/navigation-context.tsx'
+import { Home, UserRound } from 'lucide-react'
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,7 @@ const router = createBrowserRouter([
     element: <App/>,
     children:[
       {
-        path: "home",
+        path: "",
         element: <HomePage/>,
       },
     ]
@@ -22,11 +24,29 @@ const router = createBrowserRouter([
 
 ]);
 
+const nav = [
+  {
+    con: <Home size={20}/>,
+    link: "/",
+    label: "Home"
+  },
+  {
+  con: <UserRound size={20}/>,
+  link: "/home",
+  label: "Profile"
+  }
+]
+
+
 
 createRoot(document.getElementById('root')!).render(
+
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
     <StrictMode>
-      <RouterProvider router={router} />
+      <NavigationContext.Provider value={nav}>
+        <RouterProvider router={router} />
+      </NavigationContext.Provider>
+
     </StrictMode>
   </ThemeProvider>
 )

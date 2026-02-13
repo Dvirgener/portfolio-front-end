@@ -1,11 +1,15 @@
-import { Home, UserRound } from "lucide-react"
 import VirgNavItem from "./virg-nav-item"
+import { useContext } from "react";
+import { NavigationContext } from "@/store/context/navigation-context";
 
 export default function VirgNav(){
+
+    const navCtx = useContext(NavigationContext);
     return(
         <div className="flex gap-4">
-            <VirgNavItem linkTo="/" icon={<Home size={15}/>}>Home</VirgNavItem>
-            <VirgNavItem linkTo="/home" icon={<UserRound size={15} />}>Profile</VirgNavItem>
+            {
+                navCtx.map((nav) => (<VirgNavItem icon={nav.con} linkTo={nav.link}>{nav.label}</VirgNavItem>))
+            }
         </div>
     )
 }
