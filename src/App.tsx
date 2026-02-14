@@ -2,6 +2,7 @@
 import './App.css'
 import MainNavigation from './components/custom/virg-main-nav'
 import { Outlet } from 'react-router'
+import Footer from './pages/sections/Footer'
 
 
 
@@ -17,7 +18,7 @@ function App() {
         <Outlet/>
       </div>
 
-
+      <Footer/>
     </div>
   )
 }

@@ -8,7 +8,7 @@ export default function Portfolio(){
                 <p className="text-center text-white roboto-virg">A curated selection of my best work, showcasing my skills in design and development.</p>
             </div>
             <div className="flex justify-center">
-                <div className="grid md:grid-cols-3 gap-5 w-250">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 w-max">
                     <PortfolioCard/>
                     <PortfolioCard/>
                     <PortfolioCard/>
