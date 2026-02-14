@@ -17,24 +17,23 @@ import { Switch } from "@/components/ui/switch"
 export default function ContactForm(){
     return(
 <FieldSet>
-  <FieldLegend>Profile</FieldLegend>
-  <FieldDescription>This appears on invoices and emails.</FieldDescription>
   <FieldGroup>
     <Field>
-      <FieldLabel htmlFor="name">Full name</FieldLabel>
-      <Input id="name" autoComplete="off" placeholder="Evil Rabbit" />
-      <FieldDescription>This appears on invoices and emails.</FieldDescription>
+      <FieldLabel htmlFor="username">Full Name</FieldLabel>
+      <Input id="username" autoComplete="off" />
+      {/* <FieldError>Choose another username.</FieldError> */}
     </Field>
-    <Field>
-      <FieldLabel htmlFor="username">Username</FieldLabel>
-      <Input id="username" autoComplete="off" aria-invalid />
-      <FieldError>Choose another username.</FieldError>
+        <Field>
+      <FieldLabel htmlFor="username">Email Address</FieldLabel>
+      <Input id="username" autoComplete="off" />
+
     </Field>
-    <Field orientation="horizontal">
-      <Switch id="newsletter" />
-      <FieldLabel htmlFor="newsletter">Subscribe to the newsletter</FieldLabel>
+        <Field>
+      <FieldLabel htmlFor="username">Phone NumBer</FieldLabel>
+      <Input id="username" autoComplete="off" />
     </Field>
   </FieldGroup>
+  <button className="md:mx-50 border bg-red-500 py-2 rounded-lg shadow-md shadow-white/60 hover:text-black hover:scale-110 transition-all hover:bg-white hover:shadow-black hover:cursor-pointer">Send Message</button>
 </FieldSet>
     )
 }

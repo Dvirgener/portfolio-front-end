@@ -8,7 +8,7 @@ export default function VirgNav(){
     return(
         <div className="flex gap-4">
             {
-                navCtx.map((nav) => (<VirgNavItem icon={nav.con} linkTo={nav.link}>{nav.label}</VirgNavItem>))
+                navCtx.map((nav) => (<VirgNavItem key={nav.label} icon={nav.con} linkTo={nav.link}>{nav.label}</VirgNavItem>))
             }
         </div>
     )

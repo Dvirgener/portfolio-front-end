@@ -47,10 +47,8 @@ export default function FloatingShapes({
       return {
         id: `shape-${i}-${Math.random().toString(16).slice(2)}`,
         type,
-        xPct: rand(15, 85),
-        yPct: rand(15, 85),
-        // xPct: 5,
-        // yPct: 5,
+        xPct: rand(5, 100),
+        yPct: rand(5, 100),
         sizePx,
         opacity,
         blurPx,

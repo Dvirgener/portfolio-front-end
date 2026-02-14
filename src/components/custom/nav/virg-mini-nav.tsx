@@ -9,7 +9,7 @@ export default function VirgMiniNav (){
     return(
         <div className="p-2 space-y-3">
             {
-                navCtx.map((nav) => (<VirgMiniNavItem icon={nav.con} linkTo={nav.link}>{nav.label}</VirgMiniNavItem>))
+                navCtx.map((nav) => (<VirgMiniNavItem key={nav.label} icon={nav.con} linkTo={nav.link}>{nav.label}</VirgMiniNavItem>))
             }
             
 

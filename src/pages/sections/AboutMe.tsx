@@ -1,14 +1,12 @@
 import VirgPills from "@/components/custom/virg-pills";
+import SectionTitle from "@/components/custom/virg-section-title";
 import Skill from "@/components/custom/virg-skillset";
 import { CodeXml, Database, Layers, PenTool } from "lucide-react";
 
 export default function AboutMe(){
     return(
         <div className="px-10 md:px-20">
-            <div className="mb-15">
-                <p className="special-elite-regular text-3xl md:text-6xl grenze-regular text-center mb-3"><span className="text-white">About</span> Me</p>
-                <p className="text-center text-white roboto-virg">A PHP Laravel Developer dedicated to building dynamic and exceptional digital experience.</p>
-            </div>
+            <SectionTitle titleNot="About" titleBold="Me" description="A PHP Laravel Developer dedicated to building dynamic and exceptional digital experience."/>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-white robot-virg">
                 <div className="col md:col-span-2">
                     <p className="special-elite-regular text-xl md:text-4xl grenze-bold-italic mb-8">Crafting Digital Solutions for Business Growth</p>
