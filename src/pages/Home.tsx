@@ -6,6 +6,10 @@ import Portfolio from './sections/Porfolio'
 import Testimonials from './sections/Testimonials'
 
 export default function HomePage(){
+
+
+
+
     return(
         <>
         <section className='h-full mb-10' id="hero-section">
@@ -24,12 +28,8 @@ export default function HomePage(){
             <Testimonials/>
         </section>
 
-        <section className=' mb-10' id="contact-section">
-            <Contact/>
-        </section>
-
         <section className='' id="contact-section">
-            <AdditionalContact/>
+
         </section>
         </>
 

@@ -9,15 +9,17 @@ import HomePage from './pages/Home.tsx'
 import App from './App.tsx'
 import { NavigationContext } from './store/context/navigation-context.tsx'
 import { Home, UserRound } from 'lucide-react'
+import { action as contactAction } from './components/custom/contact/ContactForm.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    action:contactAction,
     children:[
       {
-        path: "",
-        element: <HomePage/>,
+        index:true,
+        element: <HomePage/>,       
       },
     ]
   },
