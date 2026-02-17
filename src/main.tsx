@@ -1,6 +1,10 @@
-import { StrictMode } from 'react'
+// import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+
+// These are the Redux Store Imports
+import {Provider} from 'react-redux'
+import store from './store/redux/reduxStore.tsx'
 
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router'
@@ -9,13 +13,11 @@ import HomePage from './pages/Home.tsx'
 import App from './App.tsx'
 import { NavigationContext } from './store/context/navigation-context.tsx'
 import { Home, UserRound } from 'lucide-react'
-import { action as contactAction } from './components/custom/contact/ContactForm.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-    action:contactAction,
     children:[
       {
         index:true,
@@ -44,11 +46,10 @@ const nav = [
 createRoot(document.getElementById('root')!).render(
 
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-    <StrictMode>
-      <NavigationContext.Provider value={nav}>
-        <RouterProvider router={router} />
-      </NavigationContext.Provider>
-
-    </StrictMode>
+      <Provider store={store}>
+        <NavigationContext.Provider value={nav}>
+          <RouterProvider router={router} />
+        </NavigationContext.Provider>
+      </Provider>
   </ThemeProvider>
 )

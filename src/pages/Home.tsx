@@ -16,7 +16,7 @@ export default function HomePage(){
             <HeroSection/>
         </section>
 
-        <section className='h-full mb-25' id="about-section">
+        <section className='h-full mb-25 md:mx-45' id="about-section">
             <AboutMe/>
         </section>
 
@@ -29,7 +29,8 @@ export default function HomePage(){
         </section>
 
         <section className='' id="contact-section">
-
+            <Contact/>
+            <AdditionalContact/>
         </section>
         </>
 
